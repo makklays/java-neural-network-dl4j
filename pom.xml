@@ -8,10 +8,184 @@
     <artifactId>java-neural-network-dl4j</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <!--repository>
+            <id>bintray</id>
+            <url>http://dl.bintray.com/marytts/marytts</url>
+        </repository-->
+        <!--repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository-->
+    </repositories>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <!-- Vosk -->
+        <dependency>
+            <groupId>com.alphacephei</groupId>
+            <artifactId>vosk</artifactId>
+            <version>0.3.38</version>
+        </dependency>
+
+        <!-- NLP -->
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>4.5.1</version>
+        </dependency>
+
+        <!-- FreeTTS -->
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>cmu_us_kal</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>cmu_time_awb</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>cmudict04</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>cmutimelex</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>cmulex</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
+        <!-- MarryTTS -->
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-runtime</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/marytts/marytts-runtime-5.2-jar-with-dependencies.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-lang-en</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/marytts/marytts-lang-en-5.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-cmu-slt-hsmm</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/marytts/voice-cmu-slt-hsmm-5.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-client</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/marytts/marytts-client-5.2-jar-with-dependencies.jar</systemPath>
+        </dependency>
+
+        <!-- ru -->
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-lang-ru</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/marytts/marytts-lang-ru-5.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-voxforge-ru-nsh</artifactId>
+            <version>5.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/voice-voxforge-ru-nsh-5.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts</artifactId>
+            <version>5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-voxforge-ru-nsh</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!-- Основное runtime -->
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-runtime</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!-- Английский язык + голос -->
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-lang-en</artifactId>
+            <version>5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-cmu-slt-hsmm</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!-- Русский язык + голос -->
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-lang-ru</artifactId>
+            <version>5.2</version>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-anna-hsmm</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!-- Испанский язык + голос -->
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-lang-es</artifactId>
+            <version>5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>voice-istc-lucia-hsmm</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts-client</artifactId>
+            <version>5.2</version>
+        </dependency-->
+
+        <!--dependency>
+            <groupId>de.dfki.mary</groupId>
+            <artifactId>marytts</artifactId>
+            <version>5.2.1</version>
+        </dependency-->
+    </dependencies>
 
 </project>

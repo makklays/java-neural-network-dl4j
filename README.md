@@ -12,7 +12,10 @@ Mi asistente de voz con su propia lógica analiza el texto de entrada (a través
 
 Puede responder y emitir señales por voz, por ejemplo, en <b>operaciones financieras</b> de un banco, para facilitar la toma oportuna de decisiones en distintas situaciones. Se trata de indicaciones o <b>alertas por voz</b>, generadas de acuerdo con la lógica utilizada en el <b>sector financiero</b>, en el <b>ámbito bancario</b> o según las normativas del <b>Banco de España</b>.
 
-<img src="./src/main/resources/mystatic/images/Madrid_Metro_Estacion_de_Banco_de_Espana.jpg" style="width:600px" title="Banco de España" />
+<p>
+    <img src="./src/main/resources/mystatic/images/Madrid_Metro_Estacion_de_Banco_de_Espana.jpg" style="width:400px" title="Banco de España" />
+    <img src="./src/main/resources/mystatic/images/photo_2025-06-23_18-58-36.jpg" style="width:300px" />
+</p>
 
 Este asistente puede hablar con voz, como en un vagón de metro: “Atención, se cierran las puertas”. 😄
 

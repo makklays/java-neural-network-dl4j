@@ -16,6 +16,14 @@ import java.io.InputStream;
 import java.util.Locale;
 import java.util.Set;
 
+/**
+ * Mi asistente de voz
+ *
+ * @author Alexander Kuziv makklays@gmail.com
+ * @since 01-07-2025
+ * @version 0.0.1
+ */
+
 public class Main {
     public static void main(String[] args) throws Exception {
         //System.out.println("Hello world!");

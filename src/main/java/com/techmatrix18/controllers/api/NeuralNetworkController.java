@@ -15,6 +15,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * REST API and URLs for Neural Network
+ *
+ * @author Alexander Kuziv makklays@gmail.com
+ * @since 01-07-2025
+ * @version 0.0.1
+ */
+
 @RestController
 public class NeuralNetworkController {
 

@@ -8,24 +8,38 @@
     <artifactId>java-neural-network-dl4j</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <!--repository>
-            <id>bintray</id>
-            <url>http://dl.bintray.com/marytts/marytts</url>
-        </repository-->
-        <!--repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository-->
-    </repositories>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- Vosk -->
         <dependency>
             <groupId>com.alphacephei</groupId>
@@ -120,6 +134,19 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/voice-voxforge-ru-nsh-5.0-SNAPSHOT.jar</systemPath>
         </dependency>
+
+        <!-- DL4J AI -->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>1.0.0-beta7</version> <!-- Используйте более стабильную версию -->
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>1.0.0-beta7</version> <!-- Используйте более стабильную версию -->
+        </dependency>
+        <!-- end DL4J -->
 
         <!--dependency>
             <groupId>de.dfki.mary</groupId>
